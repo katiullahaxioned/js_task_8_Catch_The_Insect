@@ -82,6 +82,24 @@ sub { bottom: -.25em; }
 .cf { *zoom: 1; }
 
 /*for all*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --clr-violet: #516cff;
+  --clr-white: #fff;
+}
+
+.container {
+  scroll-behavior: smooth;
+}
+
 body {
   box-sizing: border-box;
   font-family: sans-serif;
@@ -97,58 +115,144 @@ li {
   list-style-type: none;
 }
 
+span {
+  display: inline-block;
+}
+
+.section-heading {
+  font-size: 42px;
+  word-spacing: 10px;
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
 /*for wrapper*/
 .wrapper {
   max-width: 1360px;
-  width: 86%; 
+  width: 96%;
   margin: 0 auto;
 }
-/*=================================
-  Header styling starts here
-=================================*/
-
-
-
-
-
-
-/*=================================
-  Header styling ends here
-=================================*/  
 
 /*=================================
   main styling starts here
 =================================*/
 
+.container {
+  width: 100%;
+  max-height: 100vh;
+  overflow: hidden;
+  background-color: var(--clr-violet);
+}
 
+.wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  color: var(--clr-white);
+}
 
+/* section 1 starts here */
 
+.play-button {
+  padding: 10px 20px;
+  border-radius: 2px;
+  background-color: var(--clr-white);
+  color: var(--clr-violet);
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: capitalize;
+  transition: all .3s;
+}
 
+/* section 1 ends here */
 
+/* section 2 starts here */
 
+.insect-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.insect {
+  width: 110px;
+  height: 110px;
+  padding: 7px 15px;
+  border: 2px solid var(--clr-white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.insect.insect-active {
+  color: var(--clr-violet);
+  background-color: var(--clr-white);
+}
+
+.insect a {
+  color: var(--clr-white);
+}
+
+.insect span {
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.insect figure {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.insect img {
+  height: 100%;
+}
+
+/* section 2 ends here */
+
+/* section 3 starts here */
+
+.game-main .wrapper {
+  justify-content: initial;
+  align-items: initial;
+  gap: 0;
+}
+
+.game-time-score {
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.game-time-score span {
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.game-display {
+  width: 95%;
+  height: 80vh;
+  padding: 10px;
+  position: relative;
+}
+
+/* section 3 ends here */
+
+.hide {
+  display: none;
+}
 
 /*=================================
   main styling ends here
 =================================*/
-
-/*=================================
-  footer styling starts here
-=================================*/ 
-
-
-
-
-
-
-
- /*=================================
-  footer styling ends here
-=================================*/ 
-
-/*media query starts*/
-/*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
